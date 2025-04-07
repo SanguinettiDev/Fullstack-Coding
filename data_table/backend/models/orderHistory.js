@@ -1,7 +1,11 @@
 const mongoose = require("mongoose");
 
-const orderSchema = new mongoose.Schema({
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+const orderHistorySchema = new mongoose.Schema({
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
   products: [
     {
       productId: {
@@ -10,12 +14,13 @@ const orderSchema = new mongoose.Schema({
         required: true,
       },
       quantity: { type: Number, required: true },
+      priceAtPurchase: { type: Number, required: true },
     },
   ],
   totalPrice: { type: Number, required: true },
   createdAt: { type: Date, default: Date.now },
 });
 
-const Order = mongoose.model("Order", orderSchema);
+const OrderHistory = mongoose.model("OrderHistory", orderHistorySchema);
 
-module.exports = Order;
+module.exports = OrderHistory;

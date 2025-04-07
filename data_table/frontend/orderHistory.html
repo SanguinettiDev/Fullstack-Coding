@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Histórico de Pedidos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Usuários</a>
+      <a href="plantations.html">Plantações</a>
+      <a href="product.html">Produtos</a>
+      <a href="orderHistory.html">Histórico de Pedidos</a>
+    </nav>
+
+    <h1>Histórico de Pedidos</h1>
+
+    <form id="order-form">
+      <input type="text" id="userId" placeholder="ID do Usuário" required />
+
+      <div id="product-list">
+        <div class="product-entry">
+          <input type="text" class="productId" placeholder="ID do Produto" required />
+          <input type="number" class="quantity" placeholder="Quantidade" required />
+          <input type="number" class="priceAtPurchase" placeholder="Preço Unitário" required />
+        </div>
+      </div>
+
+      <button type="button" id="add-product">Adicionar Produto</button>
+      <input type="number" id="totalPrice" placeholder="Preço Total" required />
+      <button type="submit">Registrar Pedido</button>
+    </form>
+
+    <h2>Pedidos Registrados</h2>
+    <table id="order-table">
+      <thead>
+        <tr>
+          <th>Usuário</th>
+          <th>Produtos</th>
+          <th>Total</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="js/orderHistory.js"></script>
+  </body>
+</html>
