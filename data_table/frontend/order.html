@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pedido</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Usuários</a>
+      <a href="plantations.html">Plantações</a>
+      <a href="product.html">Produtos</a>
+      <a href="order.html">Pedidos</a>
+    </nav>
+
+    <h1>Pedido</h1>
+
+    <form id="order-form">
+      <input type="text" id="userId" placeholder="User ID" required />
+      <input type="text" id="productId" placeholder="Product ID" required />
+      <input type="number" id="quantity" placeholder="Quantity" required />
+      <input type="number" id="totalPrice" placeholder="Total Price" required />
+      <button type="submit">Add Order</button>
+    </form>
+
+    <ul id="order-list"></ul>
+
+    <script src="js/order.js"></script>
+  </body>
+</html>
